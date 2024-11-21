@@ -1,41 +1,41 @@
-//Ini JavaScript//
-
+// Fungsi Validate Form 
 function validateForm() {
-    const name = document.forms["contactus-form"]["your-name"].value;
-    const emailAddress = document.forms["contactus-form"]["email-address"].value;
-    const whatInterested = document.form["contacus-form"]["what-interestedin"].value;
-
-    if (name == "" || emailAddress == "" || whatInterested == "") {
-        alert("Tidak boleh ada yang kosong");
+    const userName = document.getElementById("user-name").value;
+    const emailAddress = document.getElementById("email").value;
+    const destinationOption = document.getElementById("destination").value;
+    console.log(userName, emailAddress, destinationOption);
+    if (userName == "" || emailAddress == "" || destinationOption == "") {
+        alert('"Please Fill Out Your Form."');
+    } else {
+        alert('"Successfully Submitted Your Form."');
     }
-
-    setSenderUI(name, emailAddress, whatInterested);
-
-    return false;
-}
-
-function setSenderUI(name, emailAddress, whatInterested) {
-    document.getElementByID("sender-your-name").innerHTML = name;
-    document.getElementById("sender-email-address").innerHTML = emailAddress;
-    document.getElementById("sender-what-interestedin").innerHTML = whatIntersted;
 }
 
 // Auto Slide Banner
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slides img');
-const totalSlides = slides.length;
+let indexSlide = 1;
+const listImages = document.getElementsByClassName("banner-autoslide");
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = i === index ? 'block' : 'none';
-    });
-}
+nextSlide();
 
+//Fungsi Mengganti Gambar
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
+    showSlide(indexSlide += 1);
 }
 
-// Tampilkan slide pertama dan jalankan auto-slide
-showSlide(currentSlide);
-setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+//Fungsi Mengihlangkan Gambar
+function hideAllSlide() {
+    for (let i = 0; i < listImages.length; i++) {
+        listImages[i].style.display = "none";
+    }
+}
+
+//Fungsi Menampilkan Gambar
+function showSlide(index) {
+    //Merestart Gambar
+    if (index > listImages.length) indexSlide = 1;
+    hideAllSlide();
+    listImages[indexSlide - 1].style.display = "block";
+}
+
+//Menjalankan Auto Slide Banner
+setInterval(()=> nextSlide(), 3000); //Mengganti Slide Setiap 3 detik

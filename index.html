@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TravelinT</title>
     <link rel="stylesheet" href="css\styles.css">
 </head>
 
@@ -16,9 +16,9 @@
 
         <!--Variabel Navigasi-->
         <nav>
-            <a class="navbar">Home</a>
-            <a class="navbar">Our Package</a>
-            <a class="navbar">Call Us</a>
+            <a class="navbar" href="#home">Home</a>
+            <a class="navbar" href="#our-package"> Our Package</a>
+            <a class="navbar" href="#call-us">Call Us</a>
         </nav>
     </header>
 
@@ -26,7 +26,7 @@
 
     <main>
         <!--Slide Artikel Header-->
-        <main class="main-article-header">
+        <main id="home" class="main-article-header">
             <h1>Welcome to TravelinT</h1> 
             <h3>Your Trusted Travel Agent's</h3>
         </main>
@@ -36,13 +36,12 @@
 
             <!--Konten Banner Autoslide-->
             <section class="container-banner">
-                <div class="banner-autoslide">
-                    <div class="slides">
-                        <img src="https://wallpaperaccess.com/full/2873432.jpg" alt="Banner 1">
-                        <img src="https://wallpaperaccess.com/full/4596596.jpg" alt="Banner 2">
-                        <img src="https://wallpapercave.com/wp/wp4672092.jpg" alt="Banner 3">
-                    </div>
-                </div>
+                <div class="banner-autoslide image1"></div>
+                <div class="banner-autoslide image2"></div>
+                <div class="banner-autoslide image3"></div>
+                <div class="banner-autoslide image4"></div>
+                <div class="banner-autoslide image5"></div>
+                <div class="banner-autoslide image6"></div>  
 
                 <p>"Liburan jadi menyenangkan bersama TravelinT."</p>
             </section>
@@ -52,21 +51,21 @@
             <section id="contact" class="contact">
                 <h2>Contact Us</h2>
                 <p>Sales will contact you within 1x24 hours after we receive the data.</p>
-                <form id="contact-form">
+                <form id class="contact-form">
 
                     <!--Form Untuk Nama-->
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Full Name" required>
-                    <span class="error">Please enter your full name.</span>
+                    <label for="user-name">Your Name</label>
+                    <input id="user-name" placeholder="Full Name" required>
+            
         
                     <!--Form Untuk Email-->
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
-                    <span class="error">Please enter a valid email address.</span>
+                    <input id="email" placeholder="example@email.com" required>
+                    
 
                     <!--Form Untuk Option Destinasi-->
                     <label for="destination">What are you interested in?</label>
-                    <select id="destination" name="destination" required>
+                    <select id="destination" required>
                         <option value="" disabled selected>Select Option</option>
                         <option value="Bali">Bali</option>
                         <option value="Japan">Japan</option>
@@ -75,10 +74,10 @@
                         <option value="Surabaya">Surabaya</option>
                         <option value="Third Feature">Third Feature</option>
                     </select>
-                    <span class="error">Please select an option.</span>
+                
                     <br />
-
-                    <button type="submit">Send</button>
+                    <!--Form Button Untuk Validate JavaScript-->
+                    <button type="button" onclick="validateForm()">SEND</button>
                 </form>
             </section>
         </article>
@@ -86,14 +85,81 @@
         <hr />
 
         <!--Slide Our Package-->
-        <article>
+        <article id="our-package">
             <header class="our-package-header">
                 <h1>Our Package</h1>
             </header>
 
             <!--Konten Our Package-->
             <section class="our-package-content">
-                <h2>Konten Our Package</h2>
+                <div class="container-package-content">
+                    <div class="row-our-content">
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>Bali</h3>
+                                <p>"Explore the beauty of Bali, where stunning beaches, rich culture, and vibrant cuisine await you."</p>
+                            </div>
+                        </div>
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>Jakarta</h3>
+                                <p>"Discover the vibrant energy of Jakarta, a bustling metropolis filled with diverse culture, shopping, and delicious street food."</p>
+                            </div>
+                        </div>
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>Lombok</h3>
+                                <p>"Experience the natural beauty of Lombok, with its pristine beaches, stunning waterfalls, and breathtaking hiking trails."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-our-content">
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>Tokyo</h3>
+                                <p>"Shizukana jiin kara nigiyakana toshi made, kodai no dentō to gendai no kakushin ga kanpeki ni yūgō shita Nihon o tansaku shite kudasai."</p>
+                            </div>
+                        </div>
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>Paris</h3>
+                                <p>"Découvrez le charme de la France, avec ses monuments emblématiques, sa riche histoire et sa cuisine exquise."</p>
+                            </div>
+                        </div>
+                        <div class="destination-our-package">
+                            <div class="icon-our-content">📍</div>
+                            <div class="info">
+                                <h3>New York</h3>
+                                <p>"Explore the diverse landscapes of the United States, from stunning national parks to vibrant cities full of culture and history."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <hr />
+
+        <!--Slide Call Us-->
+        <article id="call-us" class="main-call-us">
+            <header class="call-us-header">
+                <h1>Call Us</h1>
+            </header>
+
+            <!--Konten Call Us-->
+            <section class="call-us-content">
+                <h3>"Explore the World, Create Unforgettable Memories"</h3>
+                <br />
+                <p>Thank you for visiting TravelinT, your trusted travel partner! We hope your experience with us has inspired your next adventure. At TravelinT, every journey is not just about the destination but the beautiful stories you create along the way.
+                    Wherever your dreams take you, we’re here to make them a reality. See you on your next adventure! 🌍✈️
+                </p>    
+                <h4>TravelinT – Taking You Around the World, One Step at a Time.</h4>
+                <button type="button">CONTACT ME</button>
             </section>
         </article>
     </main>
@@ -102,9 +168,10 @@
 
     <!--Slide Footer-->
     <footer>
-        <span>Made by Carl@2024</span>
+        <span>TravelinT@2024</span>
     </footer>
 
+    <!--File JavaScript-->
     <script src="js/script.js"></script>
 </body>
 </html>
