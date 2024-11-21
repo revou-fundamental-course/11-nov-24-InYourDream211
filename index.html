@@ -9,9 +9,12 @@
 </head>
 
 <body>
+
+    <!--Slide Main Header Project-->
     <header class="main-header">
         <div class="main-logo"></div>
 
+        <!--Variabel Navigasi-->
         <nav>
             <a class="navbar">Home</a>
             <a class="navbar">Our Package</a>
@@ -22,40 +25,86 @@
     <hr />
 
     <main>
-        <header class="main-article-header">
-            <h1>Your Trusted Travel Agent's </h1>
-            <h3>Your hapiness is our hapiness</h3>
-        </header>
+        <!--Slide Artikel Header-->
+        <main class="main-article-header">
+            <h1>Welcome to TravelinT</h1> 
+            <h3>Your Trusted Travel Agent's</h3>
+        </main>
 
-        <!--Konten Utama-->
+        <!--Slide Konten Utama-->
         <article class="main-article">
+
             <!--Konten Banner Autoslide-->
             <section class="container-banner">
-                <div class="banner-autoslide"></div>
+                <div class="banner-autoslide">
+                    <div class="slides">
+                        <img src="https://wallpaperaccess.com/full/2873432.jpg" alt="Banner 1">
+                        <img src="https://wallpaperaccess.com/full/4596596.jpg" alt="Banner 2">
+                        <img src="https://wallpapercave.com/wp/wp4672092.jpg" alt="Banner 3">
+                    </div>
+                </div>
 
-                <p>"Liburan jadi menyenangkan bersama Travel Agentku."</p>
+                <p>"Liburan jadi menyenangkan bersama TravelinT."</p>
             </section>
 
-            <!--Form Contact Us-->
-            <section>
-                <h2>Form Contact Us</h2>
+
+            <!-- Slide Form Contact Us-->
+            <section id="contact" class="contact">
+                <h2>Contact Us</h2>
+                <p>Sales will contact you within 1x24 hours after we receive the data.</p>
+                <form id="contact-form">
+
+                    <!--Form Untuk Nama-->
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                    <span class="error">Please enter your full name.</span>
+        
+                    <!--Form Untuk Email-->
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    <span class="error">Please enter a valid email address.</span>
+
+                    <!--Form Untuk Option Destinasi-->
+                    <label for="destination">What are you interested in?</label>
+                    <select id="destination" name="destination" required>
+                        <option value="" disabled selected>Select Option</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Bandung">Bandung</option>
+                        <option value="Surabaya">Surabaya</option>
+                        <option value="Third Feature">Third Feature</option>
+                    </select>
+                    <span class="error">Please select an option.</span>
+                    <br />
+
+                    <button type="submit">Send</button>
+                </form>
             </section>
         </article>
 
-        <!--Konten Our Package-->
+        <hr />
+
+        <!--Slide Our Package-->
         <article>
             <header class="our-package-header">
                 <h1>Our Package</h1>
             </header>
 
+            <!--Konten Our Package-->
             <section class="our-package-content">
                 <h2>Konten Our Package</h2>
             </section>
         </article>
     </main>
 
+    <hr />
+
+    <!--Slide Footer-->
     <footer>
         <span>Made by Carl@2024</span>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

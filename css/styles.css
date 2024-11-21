@@ -1,62 +1,148 @@
 /*Ini CSS*/
 
+/*Header Konten Utama*/
 .main-header {
     display: flex;
     justify-content: space-between;
 }
 
+/*Konten Artikel*/
 .main-article {
     display: flex;
     justify-content: space-evenly;
 }
 
+/*Container Konten Banner*/
 .container-banner {
     flex: 1;
+    margin-right: 32px;
 }
 
+/*Konten Logo*/
 .main-logo {
     height: 75px;
     width: 75px;
-    background-image: url(https://static.vecteezy.com/system/resources/previews/012/068/151/original/travel-traveling-logo-tour-and-travel-logo-design-vector.jpg);
+    background-image: url(../../../../../Downloads/LogoProjectTravelinT.png);
     background-position: center;
+    background-size: contain;
     border-radius: 50%;
+    margin-bottom: 14px;
 }
 
+/*Konten Navigasi*/
 nav {
     display: flex;
     align-items: center;
 }
 
 .navbar {
-    display: flex;
-    color: black;
+    display: block;
+    color:aliceblue;
     border: 1px solid;
     padding: 10px;
+    background-color: #5CB4F6;
 }
 
+/*Responsive*/
+@media only screen and (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+.nav {
+    width: 100%;
+    flex-direction: column;
+}
+}
+
+/*Konten Artikel Header*/
 .main-article-header {
     text-align: center;
 }
 
+/*Font h1*/
+h1 {
+    color:aliceblue;
+    background-color: #5CB4F6;
+}
+
+/*Konten Header dan Main*/
 header, main {
     margin: 32px;
 }
 
+/*Konten Banner Autoslide*/
 .banner-autoslide {
     height: 250px;
-    background-image: url(https://picsum.photos/500);
     background-position: center;
-    background-size: cover;
+    color: #333;
+    padding: 60px 0;
+    position: relative;
 }
 
+.slides img {
+    width: 100%;
+    max-height: 400px;
+    display: none;
+}
+
+/*Slide Form Contact Us*/
+.contact {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+}
+
+/*Label Contact Us*/
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/*Form Input Contact Us*/
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*Form Button Contact Us*/
+form button {
+    background-color: #003d6b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #002f4c;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+
+/*Slide Our Package*/
 .our-package-header {
     text-align: center;
 }
 
+/*Konten Our Package*/
 .our-package-content {
     text-align: center;
 }
 
+/*Konten Footer*/
 footer {
     text-align: center;
 }
